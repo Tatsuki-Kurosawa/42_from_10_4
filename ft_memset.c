@@ -1,29 +1,40 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_isalnum.c                                       :+:      :+:    :+:   */
+/*   ft_memset.c                                        :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: kurosawaitsuki <kurosawaitsuki@student.    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2022/10/11 14:45:49 by kurosawaits       #+#    #+#             */
-/*   Updated: 2022/10/12 01:20:36 by kurosawaits      ###   ########.fr       */
+/*   Created: 2022/10/11 19:28:19 by kurosawaits       #+#    #+#             */
+/*   Updated: 2022/10/12 12:45:56 by kurosawaits      ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "libc.h"
+#include "libft.h"
 
-int	ft_isalnum(int c)
+void	*ft_memset(void *s, int c, size_t n)
 {
-	if ((48 <= c && c <= 57) || (65 <= c && c <= 90) || (97 <= c && c <= 122))
-		return (1);
-	else
+	char	*str;
+
+	str = s;
+	if (n <= 0)
 		return (0);
+	else
+	{
+		while (n != 0)
+		{
+			*str = c;
+			s++;
+			n--;
+		}
+		return (s);
+	}
 }
 
 // int main(void)
 // {
-//     for (int i = 0; i <= 255; i++)
-//     {
-//         printf("%c _ %d\n", i, ft_isalnum(i));
-//     }
+//     char buf[] = "ABCDEFGHIJK";
+//     ft_memset(buf+3, 1, 0);
+//     printf("buf文字列→%s\n",buf);
+//     return 0;
 // }

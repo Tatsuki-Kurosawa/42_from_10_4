@@ -1,43 +1,18 @@
-// #include <stdio.h>
- 
-// #define PI (3.14)
-// #define area(r) PI*r*r
-// #define prt(f) (printf("%f\n", f))
- 
-// int main(void) {
-//     prt(area(10.0f));
- 
-//     return 0;
-// }
+#include <stdio.h>
+#include <stdlib.h>
+#include <string.h> 
 
-// #include <stdio.h>
-// #define prt(s) printf("%s\n", s)
-// // 実際に使う関数内では型は意識
-// int main(void){
-//     prt("abc");
-// }
-
-// #include <stdio.h>
-
-// #define DEBUG_ON
-
-// int main(void)
-// {
-
-// #ifndef DEBUG_ON
-//     printf("Hello");
-// #else
-//     printf("World");
-// #endif
-
-//     return 0;
-// }
-#include<ctype.h>
-#include<stdio.h>
-int main()
+int main(void)
 {
-    for (int i = 0; i < 256; i++)
-    {
-        printf("%d\n", isprint(i));
-    }
+    char buf[] = "ABCDDEFG";
+	char buf_2[] = "ABCDE";
+    memmove(buf_2+1,buf,5); //(dest, src, n)
+	printf("コピー後のbuf_2文字列→%s\n",buf_2);
+	for (int i = 0; i < 6; i++)
+	{
+		printf("%c\n", buf_2[i]);
+	}
+	// 4にするとヌル文字があって改行されていることがわかり、5にするとヌル文字がおされて表示されず、改行されている様子がわかる.
+	
+    return 0;
 }

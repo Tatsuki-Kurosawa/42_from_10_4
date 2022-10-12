@@ -1,29 +1,35 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_isalnum.c                                       :+:      :+:    :+:   */
+/*   ft_strlen.c                                        :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: kurosawaitsuki <kurosawaitsuki@student.    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2022/10/11 14:45:49 by kurosawaits       #+#    #+#             */
-/*   Updated: 2022/10/12 01:20:36 by kurosawaits      ###   ########.fr       */
+/*   Created: 2022/10/11 18:03:12 by kurosawaits       #+#    #+#             */
+/*   Updated: 2022/10/11 22:21:37 by kurosawaits      ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "libc.h"
+#include "libft.h"
 
-int	ft_isalnum(int c)
+int	ft_strlen(const char *s)
 {
-	if ((48 <= c && c <= 57) || (65 <= c && c <= 90) || (97 <= c && c <= 122))
-		return (1);
-	else
-		return (0);
+	int	count;
+
+	count = 0;
+	while (*s != '\0')
+	{
+		count++;
+		s++;
+	}
+	return (count);
 }
 
 // int main(void)
 // {
-//     for (int i = 0; i <= 255; i++)
-//     {
-//         printf("%c _ %d\n", i, ft_isalnum(i));
-//     }
+//     char *chara;
+//     int num;
+//     chara = "ABCDE";
+//     num = ft_strlen(chara);
+//     printf("%d", num);
 // }

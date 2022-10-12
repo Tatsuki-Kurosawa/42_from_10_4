@@ -1,29 +1,37 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_isalnum.c                                       :+:      :+:    :+:   */
+/*   ft_bzero.c                                         :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: kurosawaitsuki <kurosawaitsuki@student.    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2022/10/11 14:45:49 by kurosawaits       #+#    #+#             */
-/*   Updated: 2022/10/12 01:20:36 by kurosawaits      ###   ########.fr       */
+/*   Created: 2022/10/11 20:09:53 by kurosawaits       #+#    #+#             */
+/*   Updated: 2022/10/11 22:23:37 by kurosawaits      ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "libc.h"
+#include "libft.h"
 
-int	ft_isalnum(int c)
+void	ft_bzero(void *s, size_t n)
 {
-	if ((48 <= c && c <= 57) || (65 <= c && c <= 90) || (97 <= c && c <= 122))
-		return (1);
-	else
-		return (0);
+	char	*str;
+
+	str = s;
+	while (n != 0)
+	{
+		*str = '\0';
+		str++;
+		n--;
+	}
 }
 
 // int main(void)
 // {
-//     for (int i = 0; i <= 255; i++)
+//     char buf[] = "ABCDEFGHIJK";
+//     ft_bzero(buf+3, 1);
+//     for (int i = 0; i < 11; i++)
 //     {
-//         printf("%c _ %d\n", i, ft_isalnum(i));
+//         printf("buf文字列→%c\n",buf[i]);
 //     }
+//     return 0;
 // }

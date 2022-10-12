@@ -6,7 +6,7 @@
 /*   By: kurosawaitsuki <kurosawaitsuki@student.    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/10/11 15:16:54 by kurosawaits       #+#    #+#             */
-/*   Updated: 2022/10/11 15:16:54 by kurosawaits      ###   ########.fr       */
+/*   Updated: 2022/10/11 18:20:33 by kurosawaits      ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -19,8 +19,8 @@ int ft_isprint(int c)
         return (0);
 }
 
-int main(void)
-{
-    for (int i = 0; i <= 255; i++)
-        printf("%c _ %d\n", i, ft_isprint(i));
-}
+// int main(void)
+// {
+//     for (int i = 0; i <= 255; i++)
+//         printf("%c _ %d\n", i, ft_isprint(i));
+// }

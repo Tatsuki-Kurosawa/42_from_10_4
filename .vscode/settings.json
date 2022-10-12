@@ -1,4 +1,32 @@
+// {
+//   "editer.insertSpaces": false,
+//   "editor.detectIndentation": false,
+//   "files.associations": {
+//     "stdio.h": "c"
+//   }
+// }
+
 {
+  "files.autoSave": "afterDelay",
+  "explorer.confirmDelete": false,
+  "workbench.statusBar.visible": false,
+  "editor.acceptSuggestionOnEnter": "on",
+  "editor.accessibilitySupport": "off",
+  "editor.quickSuggestions": {
+    "other": "on",
+    "comments": "off",
+    "strings": "off"
+  },
+  "explorer.confirmDragAndDrop": false,
+  "editor.minimap.enabled": false,
+  "editor.insertSpaces": false,
+  "editor.detectIndentation": false,
+  "[c]": {
+    "editor.defaultFormatter": "keyhr.42-c-format"
+  },
+  "workbench.editorAssociations": {
+    "*.exec": "default"
+  },
   "files.associations": {
     "stdio.h": "c"
   }

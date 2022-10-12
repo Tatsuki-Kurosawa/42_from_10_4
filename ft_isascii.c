@@ -6,7 +6,7 @@
 /*   By: kurosawaitsuki <kurosawaitsuki@student.    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/10/11 15:03:59 by kurosawaits       #+#    #+#             */
-/*   Updated: 2022/10/11 15:04:00 by kurosawaits      ###   ########.fr       */
+/*   Updated: 2022/10/11 18:20:30 by kurosawaits      ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -20,8 +20,8 @@ int ft_isascii(int c)
         return (0);
 }
 
-int main(void)
-{
-    for (int i = -2; i <= 130; i++)
-        printf("%c _ %d\n", i, ft_isascii(i));
-}
+// int main(void)
+// {
+//     for (int i = -2; i <= 130; i++)
+//         printf("%c _ %d\n", i, ft_isascii(i));
+// }
