@@ -6,7 +6,7 @@
 /*   By: kurosawaitsuki <kurosawaitsuki@student.    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/10/11 19:28:19 by kurosawaits       #+#    #+#             */
-/*   Updated: 2022/10/12 12:45:56 by kurosawaits      ###   ########.fr       */
+/*   Updated: 2022/10/15 18:00:29 by kurosawaits      ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -18,23 +18,26 @@ void	*ft_memset(void *s, int c, size_t n)
 
 	str = s;
 	if (n <= 0)
-		return (0);
+		return (s);
 	else
 	{
-		while (n != 0)
+		while (n)
 		{
 			*str = c;
-			s++;
+			str++;
 			n--;
 		}
 		return (s);
 	}
 }
 
+// #include<string.h>
 // int main(void)
 // {
 //     char buf[] = "ABCDEFGHIJK";
-//     ft_memset(buf+3, 1, 0);
+	
+//     // memset(NULL, 1, 5);
+//     ft_memset(NULL, 1, 5);
 //     printf("buf文字列→%s\n",buf);
 //     return 0;
 // }
