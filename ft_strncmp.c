@@ -1,33 +1,43 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_toupper.c                                       :+:      :+:    :+:   */
+/*   ft_strncmp.c                                       :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: kurosawaitsuki <kurosawaitsuki@student.    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2022/10/12 19:37:45 by kurosawaits       #+#    #+#             */
-/*   Updated: 2022/10/12 19:43:03 by kurosawaits      ###   ########.fr       */
+/*   Created: 2022/10/13 15:43:51 by kurosawaits       #+#    #+#             */
+/*   Updated: 2022/10/13 15:46:14 by kurosawaits      ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-int	ft_toupper(int c)
+int	ft_strncmp(const char *s1, const char *s2, size_t n)
 {
-	int	chara;
+	size_t	i;
 
-	if (97 <= c && c <= 122)
-		chara = c - 32;
-	else
-		chara = c;
-	return (chara);
+	i = 0;
+	while (i < n)
+	{
+		if (*s1 != *s2)
+			return (*s1 - *s2);
+		s1++;
+		s2++;
+		i++;
+	}
+	return (0);
 }
 
-// int	main(void)
-// {
-// 	int	to;
+int	main(void)
+{
+	char test1[10] = "abc12";
+	char test2[10] = "abcde";
 
-// 	to = ft_toupper('a');
-// 	printf("aを大文字に変換→%c\n", to);
-// 	return (0);
+	printf("%d\n", ft_strncmp(test1, CHAR_MIN, 3));
+}
+
+// int main(int argc, char const *argv[])
+// {
+// 	printf("%d¥n", CHAR_MIN);
+// 	return 0;
 // }

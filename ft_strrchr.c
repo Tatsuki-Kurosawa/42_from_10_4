@@ -1,35 +1,41 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_strlen.c                                        :+:      :+:    :+:   */
+/*   ft_strrchr.c                                       :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: kurosawaitsuki <kurosawaitsuki@student.    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2022/10/11 18:03:12 by kurosawaits       #+#    #+#             */
-/*   Updated: 2022/10/12 20:57:28 by kurosawaits      ###   ########.fr       */
+/*   Created: 2022/10/12 22:17:52 by kurosawaits       #+#    #+#             */
+/*   Updated: 2022/10/12 22:18:10 by kurosawaits      ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-size_t	ft_strlen(const char *s)
+char	*ft_strrchr(const char *s, int c)
 {
-	size_t	count;
+	size_t	i;
 
-	count = 0;
-	while (*s != '\0')
+	i = ft_strlen(s);
+	while (i)
 	{
-		count++;
-		s++;
+		if (*((unsigned char *)s + i) == (char)c)
+			return ((char *)(s + i));
+		i--;
 	}
-	return (count);
+	if (*((unsigned char *)s + i) == (char)c)
+	{
+		return ((char *)(s + i));
+	}
+	return (NULL);
 }
 
 // int main(void)
 // {
-//     char *chara;
-//     int num;
-//     chara = "ABCDE";
-//     num = ft_strlen(chara);
-//     printf("%d", num);
+//     char test[20] = "yuyguy";
+// 	// char test[20];
+//     char *p;
+//     p = ft_strrchr(test,'0');
+//     printf("検索文字が見つかった場所から表示→%s\n",p);
+//     return 0;
 // }

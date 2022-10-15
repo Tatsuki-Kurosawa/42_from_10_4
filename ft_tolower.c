@@ -1,23 +1,23 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_toupper.c                                       :+:      :+:    :+:   */
+/*   ft_tolower.c                                       :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: kurosawaitsuki <kurosawaitsuki@student.    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2022/10/12 19:37:45 by kurosawaits       #+#    #+#             */
-/*   Updated: 2022/10/12 19:43:03 by kurosawaits      ###   ########.fr       */
+/*   Created: 2022/10/12 19:46:29 by kurosawaits       #+#    #+#             */
+/*   Updated: 2022/10/12 19:46:36 by kurosawaits      ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-int	ft_toupper(int c)
+int	ft_tolower(int c)
 {
 	int	chara;
 
-	if (97 <= c && c <= 122)
-		chara = c - 32;
+	if (65 <= c && c <= 90)
+		chara = c + 32;
 	else
 		chara = c;
 	return (chara);
@@ -27,7 +27,7 @@ int	ft_toupper(int c)
 // {
 // 	int	to;
 
-// 	to = ft_toupper('a');
+// 	to = ft_tolower('A');
 // 	printf("aを大文字に変換→%c\n", to);
 // 	return (0);
 // }

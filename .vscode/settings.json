@@ -28,6 +28,7 @@
     "*.exec": "default"
   },
   "files.associations": {
-    "stdio.h": "c"
-  }
+	"stdio.h": "c",
+	"limits.h": "c"
+}
 }
